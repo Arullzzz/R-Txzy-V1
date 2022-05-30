@@ -64,7 +64,7 @@ module.exports = {
           regTime: -1,
           afk: -1,
           afkReason: '',
-          autolevelup: false,
+          autolevelup: true,
           banned: false,
           level: 0,
           premium: false,
@@ -89,9 +89,9 @@ module.exports = {
           if (!('sPromote' in chat)) chat.sPromote = ''
           if (!('sDemote' in chat)) chat.sDemote = ''
           if (!('antiLink' in chat)) chat.antiLink = true
-          if (!('autoread' in chat)) chat.autoread = false
+          if (!('autoread' in chat)) chat.autoread = true
           if (!('broadcast' in chat)) chat.broadcast = true
-          if (!('badword' in chat)) chat.badword = false
+          if (!('badword' in chat)) chat.badword = true
           if (!('delete' in chat)) chat.delete = true
           if (!('desc' in chat)) chat.desc = true
           if (!('getmsg' in chat)) chat.getmsg = false
@@ -108,7 +108,7 @@ module.exports = {
           sPromote: '',
           sDemote: '',
           antiLink: true,
-          autoread: false,
+          autoread: true,
           broadcast: true,
           delete: true,
           desc: true,
@@ -117,7 +117,7 @@ module.exports = {
           stiker: false,
           viewonce: true,
           nsfw: true,
-          badword: false,
+          badword: true,
         }
 
         let settings = global.db.data.settings[this.user.jid]
@@ -132,7 +132,7 @@ module.exports = {
           if (!'group' in settings) settings.group = false
           if (!'jadibot' in settings) settings.jadibot = false
           if (!'private' in settings) settings.private = false
-          if (!'restrict' in settings) settings.restrict = false
+          if (!'restrict' in settings) settings.restrict = true
           if (!'self' in settings) settings.self = false
           if (!'backup' in settings) settings.backup = true
           if (!isNumber(settings.backupDB)) settings.backupDB = 0
@@ -144,7 +144,7 @@ module.exports = {
           group: false,
           jadibot: false,
           private: false,
-          restrict: false,
+          restrict: true,
           self: false,
           backup: true,
           backupDB: 0,
