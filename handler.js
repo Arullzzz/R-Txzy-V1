@@ -42,7 +42,7 @@ module.exports = {
           }
           if (!isNumber(user.afk)) user.afk = -1
           if (!('afkReason' in user)) user.afkReason = ''
-          if (!('autolevelup' in user)) user.autolevelup = false
+          if (!('autolevelup' in user)) user.autolevelup = true
           if (!('banned' in user)) user.banned = false
           if (!('level' in user)) user.level = 0
           if (!('premium' in user)) user.premium = false
